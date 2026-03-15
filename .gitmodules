@@ -1,0 +1,6 @@
+[submodule "agents-from-scratch"]
+	path = agents-from-scratch
+	url = https://github.com/pguso/agents-from-scratch.git
+[submodule "claw0"]
+	path = claw0
+	url = https://github.com/shareAI-lab/claw0.git
