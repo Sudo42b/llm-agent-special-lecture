@@ -15,9 +15,9 @@ from rich.rule import Rule
 from rich import box
 
 # ─── Config ──────────────────────────────────────────────────────────────────
-USE_OLLAMA   = os.getenv("USE_OLLAMA", "false").lower() == "true"
+USE_OLLAMA   = os.getenv("USE_OLLAMA", "true").lower() == "true"
 OLLAMA_BASE  = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3.5:0.8b")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
 if USE_OLLAMA:
@@ -65,7 +65,7 @@ def search_web(query: str) -> str:
         "react":     "ReAct 패턴(Yao et al. 2022): Reasoning + Acting 결합 프롬프팅 기법. Chain-of-Thought + Tool Use를 통합한 Agent 루프.",
         "gguf":      "GGUF(GPT-Generated Unified Format): llama.cpp 프로젝트의 모델 직렬화 포맷. 4-bit 양자화로 7B 모델을 4GB RAM에서 실행 가능.",
         "agent":     "AI Agent(2025): 단순 챗봇→자율 실행 시스템으로 진화. Claude Code, Cursor, Devin 등 코딩 Agent 상용화. MCP 기반 Tool 생태계 확장 중.",
-        "ollama":    "Ollama: macOS·Linux·Windows에서 LLM 로컬 실행 도구. llama.cpp 기반. 'ollama run llama3.2' 한 줄로 7B 모델 실행.",
+        "ollama":    "Ollama: macOS·Linux·Windows에서 LLM 로컬 실행 도구. llama.cpp 기반. 'ollama run qwen3.5:0.8b' 한 줄로 7B 모델 실행.",
     }
     query_lower = query.lower()
     for key, val in db.items():

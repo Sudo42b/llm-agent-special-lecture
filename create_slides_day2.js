@@ -363,7 +363,7 @@ async function build() {
     topBar(s, "어떤 모델을 골라야 하나? — 2025 기준", "모델 선택");
 
     const models = [
-      { name: "llama3.2:3b",   size: "2.0 GB", ram: "4 GB",  lang: "영어 ★★★ / 한국어 ★★☆", speed: "빠름", use: "범용 실습 기본값", c: C.sky,     rec: true },
+      { name: "qwen3.5:0.8b",   size: "2.0 GB", ram: "4 GB",  lang: "영어 ★★★ / 한국어 ★★☆", speed: "빠름", use: "범용 실습 기본값", c: C.sky,     rec: true },
       { name: "qwen2.5:3b",    size: "1.9 GB", ram: "4 GB",  lang: "한국어 ★★★★ / 영어 ★★★", speed: "빠름", use: "한국어 강의 최적", c: C.emerald, rec: true },
       { name: "llama3.2:1b",   size: "0.8 GB", ram: "2 GB",  lang: "영어 ★★☆ / 한국어 ★☆☆", speed: "매우 빠름", use: "저사양 PC 대비용", c: C.muted,   rec: false },
       { name: "phi3.5:mini",   size: "2.2 GB", ram: "4 GB",  lang: "영어 ★★★ / 한국어 ★★☆", speed: "빠름", use: "코딩 Task 강점",  c: C.indigo,  rec: false },
@@ -496,7 +496,7 @@ print(f"응답 시간: {elapsed:.2f}s")`, C.emerald, "Python 타이밍");
 
     // Reference table
     accentCard(s, 0.35, 2.92, 9.3, 2.55, C.amber);
-    s.addText("하드웨어별 참고 성능 (llama3.2:3b Q4_K_M 기준)", {
+    s.addText("하드웨어별 참고 성능 (qwen3.5:0.8b Q4_K_M 기준)", {
       x: 0.55, y: 3.0, w: 8.5, h: 0.32, margin: 0, fontSize: 12, bold: true, color: C.amber
     });
     const hwrows = [
@@ -738,8 +738,8 @@ CRITICAL INSTRUCTIONS:
     topBar(s, "Day 2 실습 미션", "실습");
 
     const missions = [
-      { lv: "기본",   desc: "Ollama + llama3.2:3b 설치 → agent.py USE_OLLAMA=true 동작 확인", c: C.emerald },
-      { lv: "심화 1", desc: "qwen2.5:3b vs llama3.2:3b 한국어 응답 품질 비교 (같은 질문 5개)", c: C.sky },
+      { lv: "기본",   desc: "Ollama + qwen3.5:0.8b 설치 → agent.py USE_OLLAMA=true 동작 확인", c: C.emerald },
+      { lv: "심화 1", desc: "qwen2.5:3b vs qwen3.5:0.8b 한국어 응답 품질 비교 (같은 질문 5개)", c: C.sky },
       { lv: "심화 2", desc: "응답 시간 측정: time() 으로 Cloud vs 로컬 latency 비교 표 만들기", c: C.indigo },
       { lv: "심화 3", desc: "Memory 구현: 대화 내용을 chat_history.json에 저장·불러오기", c: C.violet },
       { lv: "도전",   desc: "nanobot + Ollama 연결 후 loop.py와 우리 run_agent() 코드 라인 단위 비교", c: C.amber },

@@ -28,9 +28,9 @@ from rich.rule import Rule
 from rich import box
 
 # ─── Config ──────────────────────────────────────────────────────────────────
-USE_OLLAMA   = os.getenv("USE_OLLAMA", "false").lower() == "true"
+USE_OLLAMA   = os.getenv("USE_OLLAMA", "true").lower() == "true"
 OLLAMA_BASE  = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434/v1")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3.2")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "qwen3.5:0.8b")
 OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-4o-mini")
 
 if USE_OLLAMA:

@@ -300,7 +300,7 @@ results = [
     {"timestamp": datetime.now().isoformat(), "model": "gpt-4o-mini",
      "prompt": "Edge AI란?", "response_time": 0.8, "tokens": 45,
      "tok_per_sec": 56.25, "hardware": "Cloud"},
-    {"timestamp": datetime.now().isoformat(), "model": "llama3.2:3b",
+    {"timestamp": datetime.now().isoformat(), "model": "qwen3.5:0.8b",
      "prompt": "Edge AI란?", "response_time": 3.2, "tokens": 38,
      "tok_per_sec": 11.875, "hardware": "Intel i7 CPU"},
 ]
@@ -312,9 +312,9 @@ save_benchmark(results)
 | 모델 | 환경 | 응답 시간 | tok/s |
 |------|------|----------|-------|
 | gpt-4o-mini | Cloud | 0.5~1.5s | 50~100 |
-| llama3.2:3b | M1 Mac | 2~4s | 20~30 |
-| llama3.2:3b | RTX 3090 | 1~2s | 80~120 |
-| llama3.2:3b | CPU i7 | 5~15s | 5~10 |
+| qwen3.5:0.8b | M1 Mac | 2~4s | 20~30 |
+| qwen3.5:0.8b | RTX 3090 | 1~2s | 80~120 |
+| qwen3.5:0.8b | CPU i7 | 5~15s | 5~10 |
 | qwen2.5:3b | M1 Mac | 2~4s | 20~30 |
 
 ---
